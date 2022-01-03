@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  font-size: 35px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  width: 250px;
+  padding: 20px 40px;
+}
+
+.btn-swap {
+  position: relative;
+}
+
+.btn-swap span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  opacity: 0;
+  transition: opacity, 0.5s;
+}
+
+.btn-swap:hover span {
+  opacity: 1;
+}
+
+.btn-swap::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ed4848;
+  transition: width, 1s;
+}
+
+.btn-swap:hover::before {
+  width: 100%;
+}
